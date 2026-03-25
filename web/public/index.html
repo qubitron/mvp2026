@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contoso Stays — Virtual Concierge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <div class="hotel-brand">
+        <div class="brand-icon">🏨</div>
+        <div>
+          <h1>Contoso Stays</h1>
+          <p class="tagline">Virtual Concierge</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="new-chat-btn" title="Start new chat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div id="messages" class="messages-area">
+      <div class="welcome-card">
+        <div class="welcome-icon">🛎️</div>
+        <h2>Welcome to Contoso Stays</h2>
+        <p>I'm your virtual concierge. Ask me anything about our hotel — policies, reservations, loyalty program, amenities, and more!</p>
+        <div class="quick-actions">
+          <button class="quick-btn" data-question="What are the check-in and check-out times?">🕐 Check-in times</button>
+          <button class="quick-btn" data-question="What is the cancellation policy?">📋 Cancellation policy</button>
+          <button class="quick-btn" data-question="Tell me about the Contoso Rewards loyalty program">⭐ Loyalty program</button>
+          <button class="quick-btn" data-question="What is your pet policy?">🐾 Pet policy</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="chat-input-area">
+      <form id="chat-form">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Ask about our hotel..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="send-btn" title="Send message">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13"/>
+              <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <p class="disclaimer">Powered by Azure AI Foundry Agent Service</p>
+    </footer>
+  </div>
+
+  <div id="status-toast" class="status-toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

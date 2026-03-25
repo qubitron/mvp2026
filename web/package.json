@@ -1,0 +1,17 @@
+{
+  "name": "contoso-hotel-chat",
+  "version": "1.0.0",
+  "description": "Contoso Hotel chat agent powered by Azure AI Foundry Agent Service",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@azure/ai-projects": "^1.0.0",
+    "@azure/identity": "^4.0.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0"
+  }
+}
